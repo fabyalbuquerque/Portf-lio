@@ -1,0 +1,74 @@
+@use 'variaveis';
+
+.hero {
+    position: relative;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+    &__content {
+
+        .blur {
+            position: absolute;
+    
+            box-shadow:
+            0 /* Deslocamento horizontal */
+            0 /* Deslocamento vertical */
+            1000px /* Raio de desfoque */
+            50px /* Propagação da sombra */
+            #1d4ed8; /* Cor da sombra */
+    
+            z-index: -100;
+        }
+
+        h4 {
+            margin-bottom: 1rem;
+            color: variaveis.$corTextoPrincipal;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            color: variaveis.$corTextoTitle;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 4rem;
+
+            span {
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 1px #fff;
+            }
+        }
+
+        p {
+            margin-bottom: 2rem;
+            color: variaveis.$corTextoPrincipal;
+        }
+    }
+
+    &__image {
+        position: relative;
+
+        &::before {
+            content: "o";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40rem;
+            font-weight: 400;
+            line-height: 30rem;
+            color: variaveis.$corDeFundoButton;
+            opacity: 0.2;
+            z-index: -100;
+        }
+
+        img {
+            max-width: 600px;
+            margin: auto;
+        }
+    }
+}

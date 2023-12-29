@@ -1,0 +1,58 @@
+@use 'variaveis';
+
+.nav {
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    &__logo {
+        max-width: 100px;
+    }
+
+    &__links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        &__link {
+
+            a {
+                position: relative;
+                padding-bottom: 0.75rem;
+                color: variaveis.$corTextoTitle;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: variaveis.$corDeFundoButton;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover::after {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        color: variaveis.$corTextoTitle;
+        background-color: variaveis.$corDeFundoButton;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: variaveis.$corDeFundoButtonHover;
+        }
+    }
+}
