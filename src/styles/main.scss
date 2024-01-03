@@ -26,7 +26,7 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .btn {
@@ -41,4 +41,28 @@ body {
     &:hover {
         background-color: variaveis.$corDeFundoButtonHover;
     }
+}
+
+@mixin title($fontSize: 1rem) {
+    font-size: $fontSize;
+    line-height: $fontSize + 1;
+}
+
+.title {
+    @include title(2rem);
+    margin-bottom: 1rem;
+    color: variaveis.$corTextoTitle;
+    font-weight: 600;
+}
+
+.title--small {
+    @include title(1.5rem);
+    color: variaveis.$corTextoTitle;
+    font-weight: 600;
+}
+
+.title--big {
+    @include title(3rem);
+    color: variaveis.$corTextoTitle;
+    font-weight: 700;
 }

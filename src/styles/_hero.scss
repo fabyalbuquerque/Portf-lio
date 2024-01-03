@@ -2,41 +2,36 @@
 
 .hero {
     position: relative;
-    padding: 2rem 2rem;
+    padding: 0 2rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
 
     &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        .blur {
-            position: absolute;
-    
-            box-shadow:
-            0 /* Deslocamento horizontal */
-            0 /* Deslocamento vertical */
-            1000px /* Raio de desfoque */
-            50px /* Propagação da sombra */
-            #1d4ed8; /* Cor da sombra */
-    
-            z-index: -100;
-        }
 
-        h4 {
-            margin-bottom: 1rem;
-            color: variaveis.$corTextoPrincipal;
-            font-size: 1rem;
-            font-weight: 600;
+
+        &__icons {
+            display: flex;
+            flex-direction: column;
+            margin-right: 2rem;
+
+            a {
+                color: variaveis.$corDeFundoButton;
+                font-size: 1.5rem;
+                margin: 5px 0;
+
+                &:hover {
+                    color: variaveis.$corDeFundoButtonHover;
+                }
+            }
         }
 
         h1 {
-            color: variaveis.$corTextoTitle;
-            margin-bottom: 1rem;
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 4rem;
-
             span {
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke: 1px #fff;
