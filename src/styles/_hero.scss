@@ -50,10 +50,10 @@
         &::before {
             content: "o";
             position: absolute;
-            top: 0;
+            top: -32%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 40rem;
+            font-size: 42rem;
             font-weight: 400;
             line-height: 30rem;
             color: variaveis.$corDeFundoButton;
@@ -62,7 +62,7 @@
         }
 
         img {
-            max-width: 600px;
+            max-width: 350px;
             margin: auto;
         }
     }
