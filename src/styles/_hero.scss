@@ -1,14 +1,20 @@
 @use 'variaveis';
 
 .hero {
+    top: 150px;
+    min-height: 100vh;
     position: relative;
-    padding: 2rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+
+    .container {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2rem;
+    }
 
     &__content {
+        padding: 2rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,36 +24,38 @@
         &__icons {
             display: flex;
             flex-direction: column;
+            text-align: center;
             margin-right: 2rem;
 
             a {
                 color: variaveis.$corDeFundoButton;
                 width: 40px;
                 height: 40px;
-                text-align: center;
                 font-size: 1.5rem;
-                margin: 5px 0;
+                margin-bottom: 10px;
                 background: transparent;
                 border: 2px solid variaveis.$corDeFundoButton;
                 border-radius: 50%;
+                transition: all 0.5s ease;
 
                 &:hover {
-                    color: variaveis.$corDeFundoButtonHover;
+                    color: #ccc;
+                    background-color: variaveis.$corDeFundoButtonHover;
+                    border-color: variaveis.$corDeFundoButtonHover;
                 }
             }
         }
 
-        h1 {
-            span {
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke: 1px #fff;
-            }
+        h2 {
+            margin-bottom: 1rem;
         }
 
         p {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            line-height: 2rem;
             color: variaveis.$corTextoPrincipal;
         }
+
     }
 
     &__image {
@@ -56,11 +64,11 @@
         &::before {
             content: "o";
             position: absolute;
-            top: -33.5%;
+            top: -39%;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 42rem;
-            font-weight: 400;
+            font-size: 38rem;
+            font-weight: 200;
             line-height: 30rem;
             color: variaveis.$corDeFundoButton;
             opacity: 0.2;
@@ -68,8 +76,46 @@
         }
 
         img {
-            max-width: 350px;
+            max-width: 320px;
             margin: auto;
         }
     }
+
+    .center {
+        max-width: 200px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .scroll-down {
+        display: inline-flex;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto 0;
+        color: #fff;
+    }
+
+    &__arrow--down {
+        font-size: 1.5rem;
+        // position: absolute;  <-- Remova esta linha
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: arrow-pulse 1.5s infinite;
+    }
+    
+    @keyframes arrow-pulse {
+        0% {
+            transform: translateY(0);
+        }
+    
+        100% {
+            transform: translateY(10px);
+        }
+    }
 }
+
+
+

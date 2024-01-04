@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'nav';
 @use 'hero';
+@use "sobre";
 
 * {
     padding: 0;
@@ -22,6 +23,7 @@ a {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: variaveis.$corDeFundoPrincipal;
+
 }
 
 .container {
@@ -29,13 +31,21 @@ body {
     margin: 0 auto;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn {
-    padding: 1rem 2rem;
+    padding: 20px 30px;
     font-size: 1rem;
+    font-weight: 500;
     color: variaveis.$corTextoPrincipal;
     background-color: variaveis.$corDeFundoButton;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
 
     &:hover {
@@ -45,12 +55,10 @@ body {
 
 @mixin title($fontSize: 1rem) {
     font-size: $fontSize;
-    line-height: $fontSize + 1;
 }
 
 .title {
     @include title(2rem);
-    margin-bottom: 1rem;
     color: variaveis.$corTextoTitle;
     font-weight: 600;
 }
@@ -58,7 +66,7 @@ body {
 .title--small {
     @include title(1.5rem);
     color: variaveis.$corTextoTitle;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .title--big {

@@ -1,15 +1,21 @@
 @use 'variaveis';
 
 .nav {
-    margin: auto;
+    position: fixed;
+    top: 0;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: variaveis.$corDeFundoPrincipal;
     padding: 1rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    z-index: 2;
 
     &__logo {
-        max-width: 150px;
+        max-width: 80px;
     }
 
     &__links {
@@ -29,30 +35,17 @@
                     content: "";
                     position: absolute;
                     height: 2px;
+                    width: 0;
                     bottom: 0;
                     left: 0;
                     background-color: variaveis.$corDeFundoButton;
-                    transition: all 0.3s ease;
+                    transition: all 0.5s ease;
                 }
 
                 &:hover::after {
                     width: 70%;
                 }
             }
-        }
-    }
-
-    &__btn {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        color: variaveis.$corTextoTitle;
-        background-color: variaveis.$corDeFundoButton;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            background-color: variaveis.$corDeFundoButtonHover;
         }
     }
 }
