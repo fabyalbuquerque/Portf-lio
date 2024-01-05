@@ -2,11 +2,11 @@
 
 .hero {
     top: 150px;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
 
     .container {
-        padding: 2rem 0;
+        padding: 2rem 2rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;

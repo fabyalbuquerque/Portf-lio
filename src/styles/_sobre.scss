@@ -1,24 +1,21 @@
 @use "variaveis";
 
 .sobre {
-    padding-top: 30px;
     position: relative;
-
-    .title {
-        margin-bottom: 10px;
-    }
+    height: 100vh;
 
     .container {
         position: relative;
         flex-direction: column;
+        padding: 6rem 2rem;
 
         h1 {
-            padding-bottom: 50px;
+            padding-bottom: 3rem;
         }
 
         p {
             color: variaveis.$corTextoPrincipal;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .btn {
@@ -34,8 +31,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
-        gap: 50px;
+        gap: 3rem;
         padding: 4rem 0;
+
+        .title {
+            margin-bottom: 10px;
+        }
 
         &__dados {
 
@@ -43,14 +44,16 @@
                 display: flex;
                 flex-direction: column;
                 color: variaveis.$corTextoPrincipal;
+                list-style: none;
+                padding: 10px 0;
 
                 li {
                     width: 100%;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    padding: 5px;
 
-                    h5 {
-                        left: 0;
+                    p {
+                        width: 100%;
+                        text-align: justify;
                     }
                 }
             }
@@ -64,6 +67,7 @@
                 grid-template-columns: repeat(3, 1fr);
                 list-style: none;
                 color: variaveis.$corTextoPrincipal;
+                padding: 20px 0;
 
                 li {
                     font-size: 2rem;
