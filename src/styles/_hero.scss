@@ -1,7 +1,7 @@
 @use 'variaveis';
 
 .hero {
-    top: 150px;
+    padding-top: 150px;
     height: 100vh;
     position: relative;
 
@@ -93,7 +93,7 @@
         max-width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 100px auto 0;
+        margin: auto 0;
         color: #fff;
     }
 
