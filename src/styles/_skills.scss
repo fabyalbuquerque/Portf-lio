@@ -9,31 +9,38 @@
         position: relative;
         flex-direction: column;
         padding: 6rem 2rem;
-
     }
 
-    &__content {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        text-align: center;
-        list-style: none;
-        color: variaveis.$corTextoPrincipal;
-        padding-top: 50px;
-        
+    &__container {
+        width: 80%;
+        margin-top: 2rem;
+        // background-color: variaveis.$corDeFundoButtonHover;
+        border: 4px solid variaveis.$corDeFundoButton;
 
-        &__item {
-            font-size: 4rem;
-            padding: 1rem;
-            margin-bottom: 2rem;
-
-            img {
-                max-width: 150px;
-            }
-
-            .tech {
-                display: block;
-                font-size: 1rem;
+        &__content {
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            list-style: none;
+            color: variaveis.$corTextoPrincipal;
+            padding-top: 50px;
+            
+    
+    
+            &__item {
+                font-size: 4rem;
+                padding: 1rem;
+                margin-bottom: 2rem;
+    
+                img {
+                    max-width: 150px;
+                }
+    
+                .tech {
+                    display: block;
+                    font-size: 1rem;
+                }
             }
         }
     }
