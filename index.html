@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <title>Personal Portfolio</title>
@@ -21,14 +21,14 @@
         <nav class="nav">
             <div class="nav__logo">
                 <a href="#">
-                    <img src="./dist/images/1.png" alt="logo">
+                    <img src="./dist/images/logo.png" alt="logo">
                 </a>
             </div>
 
             <ul class="nav__links">
                 <li class="nav__links__link"><a href="#home">Home</a></li>
                 <li class="nav__links__link"><a href="#sobre">Sobre</a></li>
-                <li class="nav__links__link"><a href="#skills">Skills</a></li>
+                <li class="nav__links__link"><a href="#tecnologias">Tecnologias</a></li>
                 <li class="nav__links__link"><a href="#projetos">Projetos</a></li>
                 <li class="nav__links__link"><a href="#contato">Contato</a></li>
             </ul>
@@ -39,11 +39,11 @@
         <div class="container">
             <div class="hero__content">
                 <div class="hero__content__icons">
-                    <a href="#"><i class="ri-linkedin-line"></i></a>
-                    <a href="#"><i class="ri-github-line"></i></a>
-                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a  data-aos="fade-down" data-aos-duration="1000" href="#"><i class="ri-linkedin-line"></i></a>
+                    <a  data-aos="fade-down" data-aos-duration="1100" href="#"><i class="ri-github-line"></i></a>
+                    <a  data-aos="fade-down" data-aos-duration="1200" href="#"><i class="ri-instagram-line"></i></a>
                 </div>
-                <div class="hero__content__info">
+                <div data-aos="fade-down-left" data-aos-duration="1200" class="hero__content__info">
                     <h3 class="title--small">Hello World!</h3>
                     <h1 class="title--big">Sou a Fabliny,</h1>
                     <h2 class="title">Desenvolvedora de Software</h2>
@@ -55,13 +55,12 @@
                             class="ri-arrow-right-circle-fill hero__arrow--right"></i></a>
                 </div>
             </div>
-            <div class="hero__image">
-                <img src="./dist/images/Design sem nome (3).png" alt="Eu">
+            <div data-aos="flip-right" data-aos-duration="1700" class="hero__image">
+                <img src="./dist/images/foto-hero.png" alt="Eu">
             </div>
         </div>
         <div class="center">
-            <a href="#sobre" class="scroll-down
-            ">
+            <a href="#sobre" class="scroll-down">
                 Continuar
                 <i class="ri-arrow-down-line hero__arrow--down"></i>
             </a>
@@ -76,8 +75,7 @@
                     <h2 class="title">Quem sou eu?</h2>
                     <ul class="sobre__content__dados__list">
                         <li class="sobre__content__dados__list__item">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Autem, impedit.</p>
+                            <p>Cursando último semestre de Análise e Desenvolvimento de Sistemas.</p>
                         </li>
                         <li class="sobre__content__dados__list__item">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -89,16 +87,20 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Autem, impedit.</p>
                         </li>
+                        <li class="sobre__content__dados__list__item">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Autem, impedit.</p>
+                        </li>
                     </ul>
                 </div>
-                <div class="sobre__content__interesses">
-                    <h2 class="title">Atributos</h2>
+                <div class="sobre__content__habilidades">
+                    <h2 class="title">Habilidades</h2>
                     <ul>
-                        <li><i class="ri-plane-line"></i><span class="interesse">Observadora</span></li>
-                        <li><i class="ri-plane-line"></i><span class="interesse">Independente</span></li>
-                        <li><i class="ri-plane-line"></i><span class="interesse">Introvertida</span></li>
-                        <li><i class="ri-plane-line"></i><span class="interesse">viajar</span></li>
-                        <li><i class="ri-plane-line"></i><span class="interesse">viajar</span></li>
+                        <li data-aos="flip-left" data-aos-duration="1200"><i class="ri-search-eye-line"></i><span class="habilidade">Observadora</span></li>
+                        <li data-aos="flip-left" data-aos-duration="1400"><i class="ri-plane-line"></i><span class="habilidade">Independente</span></li>
+                        <li data-aos="flip-left" data-aos-duration="1600"><i class="ri-plane-line"></i><span class="habilidade">Introvertida</span></li>
+                        <li data-aos="flip-left" data-aos-duration="1700"></li>><i class="ri-plane-line"></i><span class="habilidade">viajar</span></li>
+                        <li data-aos="flip-left" data-aos-duration="1800"></li>><i class="ri-plane-line"></i><span class="habilidade">viajar</span></li>
                     </ul>
                 </div>
             </div>
@@ -106,22 +108,35 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="tecnologias" class="tecnologias">
         <div class="container flex-center">
-            <h1 class="title--big">Minhas Skills</h1>
-            <div class="skills__container flex-center">
-                <ul class="skills__container__content">
-                    <li class="skills__container__content__item"><img src="./dist/images/html-5.png" alt=""></li>
-                    <li class="skills__container__content__item"><i class="ri-plane-line"></i><span class="tech">Independente</span></li>
-                    <li class="skills__container__content__item"><i class="ri-plane-line"></i><span class="tech">Introvertida</span></li>
-                    <li class="skills__container__content__item"><i class="ri-plane-line"></i><span class="tech">viajar</span></li>
-                    <li class="skills__container__content__item"><i class="ri-plane-line"></i><span class="tech">viajar</span></li>
+            <h1 class="title--big">Tecnologias</h1>
+            <div class="tecnologias__container flex-center">
+                <ul class="tecnologias__container__content">
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/html-5.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/css-3.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/js.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/bootstrap.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/sass.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/jquery.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/git.png" alt=""></li>
+                    <li class="tecnologias__container__content__item"><img src="./dist/images/technologies/github.png" alt=""></li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <section id="projetos" class="projetos">
+        <div class="container flex-center">
+            <h1 class="title--big">Projetos</h1>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/scripts/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
